@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins-Italic.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+:root {
+    /* primary color */
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-light-red: hsl(0, 100%, 67%);
+
+    /* neutral color */
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-off-white: hsl(0, 0%, 94%);
+    --neutral-light-grey: hsl(0, 0%, 86%);
+    --neutral-smokey-grey: hsl(0, 1%, 44%);
+    --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--neutral-off-white);
+}
+
+main {
+    padding: 40px 20px;
+    background-color: var(--neutral-white);
+    border-radius: 22px 22px 70px 22px;
+    width: 300px;
+}
+
+form .date {
+    display: flex;
+    gap: 0 10px;
+}
+
+form label {
+    display: block;
+    font-size: 0.625em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--neutral-smokey-grey);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+form input[type="number"] {
+    width: 70px;
+    padding: 0.625em;
+    border-radius: 6px;
+    background-color: var(--neutral-white);
+    color: var(--neutral-off-black);
+    font-weight: 900;
+    border: 1.5px solid var(--neutral-light-grey);
+    outline: none;
+
+    /* prevent the default arrow button in Firefox */
+    -moz-appearance: textfield;
+
+}
+
+/*reset the appearance of the number input for firefox*/
+form input[type="number"] {
+    -moz-appearance: number-input;
+}
+
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form input[type="number"]::placeholder {
+    color: var(--neutral-smokey-grey);
+    font-weight: 700;
+}
+
+form .error {
+    font-size: 0.58rem;
+    font-style: italic;
+    color: var(--primary-light-red);
+    margin: 7px 0 5px 0;
+    width: 70px;
+}
+
+.form-fotter {
+    position: relative;
+}
+
+form hr {
+    height: 1.5px;
+    background-color: var(--neutral-light-grey);
+    border: none;
+    margin-top: 50px;
+}
+
+form button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--primary-purple);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3ms;
+}
+
+form button:hover {
+    background-color: var(--neutral-off-black);
+}
+
+form button svg {
+    width: 20px;
+    color: transparent;
+}
+
+section {
+    font-size: 2.7rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+section span {
+    color: var(--primary-purple);
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 480px) {
+    main {
+        width: 450px;
+        padding: 25px;
+    }
+
+    form input[type="number"] {
+        width: 100px;
+    }
+
+    form .error {
+        width: fit-content;
+    }
+
+    form hr {
+        margin-top: 25px;
+    }
+
+    form button {
+        left: 93.4%;
+    }
+
+    form .date {
+        gap: 0 15px;
+    }
+
+    section {
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
+  <title>Age calculator app</title>
+
+  <!-- link all css files -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <main>
+    <form>
+      <div class="date">
+        <div class="day-container">
+          <label for="day">Day</label>
+          <input type="number" placeholder="DD" id="day" name="day">
+        </div>
+
+        <div class="month-container">
+          <label for="month">Month</label>
+          <input type="number" placeholder="MM" id="month" name="month">
+        </div>
+
+        <div class="year-container">
+          <label for="year">Year</label>
+          <input type="number" placeholder="YYYY" id="year" name="year">
+        </div>
+      </div>
+
+      <div class="form-fotter">
+        <hr>
+        <button type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </div>
+    </form>
+
+    <section>
+      <p class="years"><span id="years">--</span>years</p>
+      <p class="months"><span id="months">--</span>months</p>
+      <p class="days"><span id="days">--</span>days</p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
